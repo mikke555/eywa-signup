@@ -105,7 +105,7 @@ class Client:
             "signature": signature,
         }
 
-        resp = self.session.post(f"{base_url}/{endpoint}", json=payload)
+        resp = self.session.post(f"{base_url}{endpoint}", json=payload)
         data = resp.json()
 
         if data.get("status") != "success":
